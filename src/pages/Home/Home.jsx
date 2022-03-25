@@ -43,9 +43,13 @@ const Home = () => {
 			setArea("All");
 		}
 		axios
-			.get(`http://localhost:3001/workouts/multi/${limit}` + search, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.get(
+				`https://react-node-workoutmanager.herokuapp.com/multi/${limit}` +
+					search,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then((res) => {
 				setWorkouts(res.data);
 			});
@@ -57,9 +61,12 @@ const Home = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`http://localhost:3001/workouts/${id}`, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.delete(
+				`https://react-node-workoutmanager.herokuapp.com/workouts/${id}`,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then(() => {
 				setWorkouts(
 					workouts.filter((workout) => {
@@ -135,7 +142,7 @@ const Home = () => {
 								const d = Math.floor(timeDiff / 60 / 24);
 								const h = Math.floor((timeDiff / 60) % 24);
 								const m = Math.floor(timeDiff % 60);
-								const dDis = d > 0 ? d + (d == 1 ? " day " : " days ") : "";
+								const dDis = d > 0 ? d + (d === 1 ? " day " : " days ") : "";
 								const hDis = h > 0 ? h + " h " : "";
 								const mDis = m > 0 ? m + " min " : "";
 

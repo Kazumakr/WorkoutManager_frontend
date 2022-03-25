@@ -13,21 +13,26 @@ const Login = () => {
 		event.preventDefault();
 		setError(false);
 		const userData = { email, password };
-		axios.post("http://localhost:3001/auth/login", userData).then((res) => {
-			if (res.data.error) {
-				alert(res.data.error);
-			} else {
-				localStorage.setItem("accessToken", res.data.token);
-				setIsLoggedin({
-					username: res.data.username,
-					id: res.data.id,
-					Days: res.data.Days,
-					status: true,
-				});
+		axios
+			.post(
+				"https://react-node-workoutmanager.herokuapp.com/auth/login",
+				userData
+			)
+			.then((res) => {
+				if (res.data.error) {
+					alert(res.data.error);
+				} else {
+					localStorage.setItem("accessToken", res.data.token);
+					setIsLoggedin({
+						username: res.data.username,
+						id: res.data.id,
+						Days: res.data.Days,
+						status: true,
+					});
 
-				navigate("/");
-			}
-		});
+					navigate("/");
+				}
+			});
 	};
 	return (
 		<Container>

@@ -47,15 +47,19 @@ const AddWorkout = () => {
 			date,
 		};
 		axios
-			.post("http://localhost:3001/workouts", newWorkout, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.post(
+				"https://react-node-workoutmanager.herokuapp.com/workouts",
+				newWorkout,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then((res) => {
 				const modifiedDate = date.substring(0, 10);
 
 				axios
 					.post(
-						`http://localhost:3001/days/${isLoggedin.id}`,
+						`https://react-node-workoutmanager.herokuapp.com/days/${isLoggedin.id}`,
 						{ date: modifiedDate },
 						{
 							headers: { accessToken: localStorage.getItem("accessToken") },

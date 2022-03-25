@@ -29,9 +29,12 @@ const Setting = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://localhost:3001/auth/singleuser/${id}`, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.get(
+				`https://react-node-workoutmanager.herokuapp.com/auth/singleuser/${id}`,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then((res) => {
 				setUsername(res.data.username);
 				setEmail(res.data.email);
@@ -46,9 +49,13 @@ const Setting = () => {
 		setSuccess(false);
 		const updatedUser = { username, email, gender, height, weight };
 		axios
-			.put(`http://localhost:3001/auth/${id}`, updatedUser, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.put(
+				`https://react-node-workoutmanager.herokuapp.com/auth/${id}`,
+				updatedUser,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then((res) => {
 				setIsLoggedin({
 					...isLoggedin,

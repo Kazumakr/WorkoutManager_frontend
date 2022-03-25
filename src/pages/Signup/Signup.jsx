@@ -14,13 +14,18 @@ const Signup = () => {
 		event.preventDefault();
 		setError(false);
 		const newUser = { username, email, password };
-		axios.post("http://localhost:3001/auth/signup", newUser).then((res) => {
-			if (res.data.error) {
-				alert(res.data.error);
-			} else {
-				navigate("/login");
-			}
-		});
+		axios
+			.post(
+				"https://react-node-workoutmanager.herokuapp.com/auth/signup",
+				newUser
+			)
+			.then((res) => {
+				if (res.data.error) {
+					alert(res.data.error);
+				} else {
+					navigate("/login");
+				}
+			});
 	};
 	return (
 		<Container>

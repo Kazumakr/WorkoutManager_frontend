@@ -19,9 +19,12 @@ const DeleteAccount = () => {
 	const handleDelete = (event) => {
 		event.preventDefault();
 		axios
-			.delete(`http://localhost:3001/auth/delete/${id}`, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.delete(
+				`https://react-node-workoutmanager.herokuapp.com/auth/delete/${id}`,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then(() => {
 				localStorage.removeItem("accessToken");
 				setIsLoggedin({

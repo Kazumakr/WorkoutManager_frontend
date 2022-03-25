@@ -24,7 +24,7 @@ const EditSchedule = () => {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:3001/schedule", {
+			.get("https://react-node-workoutmanager.herokuapp.com/schedule", {
 				headers: { accessToken: localStorage.getItem("accessToken") },
 			})
 			.then((res) => {
@@ -54,9 +54,13 @@ const EditSchedule = () => {
 			Sat,
 		};
 		axios
-			.post("http://localhost:3001/schedule", newSchedule, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.post(
+				"https://react-node-workoutmanager.herokuapp.com/schedule",
+				newSchedule,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then(() => {
 				navigate("/schedule");
 			});
@@ -73,9 +77,13 @@ const EditSchedule = () => {
 			Sat,
 		};
 		axios
-			.put("http://localhost:3001/schedule", updatedSchedule, {
-				headers: { accessToken: localStorage.getItem("accessToken") },
-			})
+			.put(
+				"https://react-node-workoutmanager.herokuapp.com/schedule",
+				updatedSchedule,
+				{
+					headers: { accessToken: localStorage.getItem("accessToken") },
+				}
+			)
 			.then(() => {
 				navigate("/schedule");
 			});

@@ -17,7 +17,7 @@ const Schedule = () => {
 	const [schedule, setSchedule] = useState([]);
 	useEffect(() => {
 		axios
-			.get("http://localhost:3001/schedule", {
+			.get("https://react-node-workoutmanager.herokuapp.com/schedule", {
 				headers: { accessToken: localStorage.getItem("accessToken") },
 			})
 			.then((res) => {
