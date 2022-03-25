@@ -30,6 +30,7 @@ const EditWorkout = () => {
 	const [menu, setMenu] = useState("");
 	const [weight, setWeight] = useState("");
 	const [date, setDate] = useState("");
+	const [newdate, setNewdate] = useState("");
 	const [unit, setUnit] = useState("");
 
 	const navigate = useNavigate();
@@ -57,6 +58,9 @@ const EditWorkout = () => {
 			unit,
 			date,
 		};
+		if (newdate) {
+			updatedWorkout.date = newdate;
+		}
 		axios
 			.put(
 				`https://react-node-workoutmanager.herokuapp.com/workouts/${id}`,
@@ -310,8 +314,14 @@ const EditWorkout = () => {
 						<Input
 							type="datetime-local"
 							pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
-							value={moment(date).format().substring(0, 16)}
-							onChange={(event) => setDate(event.target.value)}
+							value={
+								newdate
+									? newdate
+									: moment(date.toString().slice(0, -1))
+											.format()
+											.substring(0, 16)
+							}
+							onChange={(event) => setNewdate(event.target.value)}
 						/>
 					</FormGroup>
 				</Form>

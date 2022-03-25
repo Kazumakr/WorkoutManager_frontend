@@ -131,14 +131,19 @@ const Home = () => {
 								{workout.unit}
 							</Col3>
 							<Col4 data-label="Date">
-								{moment(workout.date).format("lll")}
+								{moment(workout.date.toString().slice(0, -1)).format("lll")}
 							</Col4>
 
 							{(() => {
+								const noTimezoneDate = workout.date;
 								const timeDiff = Math.floor(
-									Math.abs(Date.now() - new Date(workout.date).getTime()) /
+									Math.abs(
+										Date.now() -
+											new Date(noTimezoneDate.toString().slice(0, -1)).getTime()
+									) /
 										(60 * 1000)
 								);
+
 								const d = Math.floor(timeDiff / 60 / 24);
 								const h = Math.floor((timeDiff / 60) % 24);
 								const m = Math.floor(timeDiff % 60);
