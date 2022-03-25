@@ -35,7 +35,7 @@ const EditWorkout = () => {
 	const navigate = useNavigate();
 	useEffect(() => {
 		axios
-			.get(`http://localhost:3001/workouts/${id}`, {
+			.get(`https://react-node-workoutmanager.herokuapp.com/workouts/${id}`, {
 				headers: { accessToken: localStorage.getItem("accessToken") },
 			})
 			.then((res) => {
