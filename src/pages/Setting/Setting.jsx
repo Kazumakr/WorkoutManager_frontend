@@ -30,7 +30,7 @@ const Setting = () => {
 	useEffect(() => {
 		axios
 			.get(
-				`https://react-node-workoutmanager.herokuapp.com/auth/singleuser/${id}`,
+				`https://react-node-workoutmanager.herokuapp.com/users/singleuser/${id}`,
 				{
 					headers: { accessToken: localStorage.getItem("accessToken") },
 				}
@@ -50,7 +50,7 @@ const Setting = () => {
 		const updatedUser = { username, email, gender, height, weight };
 		axios
 			.put(
-				`https://react-node-workoutmanager.herokuapp.com/auth/${id}`,
+				`https://react-node-workoutmanager.herokuapp.com/users/${id}`,
 				updatedUser,
 				{
 					headers: { accessToken: localStorage.getItem("accessToken") },

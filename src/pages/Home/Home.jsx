@@ -44,7 +44,7 @@ const Home = () => {
 		}
 		axios
 			.get(
-				`https://react-node-workoutmanager.herokuapp.com/workouts/multi/${limit}` +
+				`https://react-node-workoutmanager.herokuapp.com/workouts/workoutslist/${limit}` +
 					search,
 				{
 					headers: { accessToken: localStorage.getItem("accessToken") },

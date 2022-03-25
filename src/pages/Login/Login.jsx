@@ -15,7 +15,7 @@ const Login = () => {
 		const userData = { email, password };
 		axios
 			.post(
-				"https://react-node-workoutmanager.herokuapp.com/auth/login",
+				"https://react-node-workoutmanager.herokuapp.com/users/login",
 				userData
 			)
 			.then((res) => {

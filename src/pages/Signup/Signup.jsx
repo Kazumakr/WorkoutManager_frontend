@@ -16,7 +16,7 @@ const Signup = () => {
 		const newUser = { username, email, password };
 		axios
 			.post(
-				"https://react-node-workoutmanager.herokuapp.com/auth/signup",
+				"https://react-node-workoutmanager.herokuapp.com/users/signup",
 				newUser
 			)
 			.then((res) => {

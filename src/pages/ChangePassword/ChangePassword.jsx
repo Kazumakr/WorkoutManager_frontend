@@ -23,7 +23,7 @@ const ChangePassword = () => {
 		event.preventDefault();
 		axios
 			.put(
-				`https://react-node-workoutmanager.herokuapp.com/auth/changepassword/${id}`,
+				`https://react-node-workoutmanager.herokuapp.com/users/changepassword/${id}`,
 				{ oldPassword: oldPassword, newPassword: newPassword },
 				{
 					headers: { accessToken: localStorage.getItem("accessToken") },

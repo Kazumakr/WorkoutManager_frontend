@@ -20,7 +20,7 @@ const DeleteAccount = () => {
 		event.preventDefault();
 		axios
 			.delete(
-				`https://react-node-workoutmanager.herokuapp.com/auth/delete/${id}`,
+				`https://react-node-workoutmanager.herokuapp.com/users/delete/${id}`,
 				{
 					headers: { accessToken: localStorage.getItem("accessToken") },
 				}

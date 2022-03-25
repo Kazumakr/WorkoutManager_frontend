@@ -28,7 +28,7 @@ function App() {
 
 	useEffect(() => {
 		axios
-			.get("https://react-node-workoutmanager.herokuapp.com/auth/auth", {
+			.get("https://react-node-workoutmanager.herokuapp.com/users/auth", {
 				headers: {
 					accessToken: localStorage.getItem("accessToken"),
 				},
