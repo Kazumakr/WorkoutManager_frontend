@@ -64,47 +64,56 @@ I struggle with managing state with useContext to keep ligin information because
 
 ### SignUp/Login
 
-https://user-images.githubusercontent.com/67501734/160208526-e10cf374-d89b-43a5-b8df-b14f67b52553.mov
+![signup_login](https://user-images.githubusercontent.com/67501734/162546643-286822c3-fc0f-4eaf-a84d-98a9bcb812ea.gif)
+
 
 ### Update user information
 
-https://user-images.githubusercontent.com/67501734/160208545-58ef974f-d851-447c-9b2f-41454603a2b4.mov
+![update_userinfo](https://user-images.githubusercontent.com/67501734/162546656-cb1b3370-e856-4dd0-afd0-4561615707e3.gif)
+
 
 ### Add a new workout record
 
-https://user-images.githubusercontent.com/67501734/160208560-87183b25-b19a-4a43-a0dd-f81e64b20c66.mov
+![add_workout](https://user-images.githubusercontent.com/67501734/162546606-2689ac4d-e62b-4153-a9a1-5302bb18a61a.gif)
+
 
 ### Update a workout record
 
-https://user-images.githubusercontent.com/67501734/160208579-4486072f-e67b-479f-9f6f-5f639f2c17e0.mov
+![update_workout](https://user-images.githubusercontent.com/67501734/162546662-fe5a9375-f608-4a7f-afcb-a49442db4bb0.gif)
+
 
 ### Get workouts by body parts
 
-https://user-images.githubusercontent.com/67501734/160208591-70629616-1fd7-46d5-afc1-89da16d08cbc.mov
+![get_workout](https://user-images.githubusercontent.com/67501734/162546635-33f3f2d0-ce0b-428a-8dec-7b04e20842f0.gif)
+
 
 ### Delete a workout record
 
-https://user-images.githubusercontent.com/67501734/160208614-e5a84d50-d5db-434c-b109-a6cf6a95ee89.mov
+![delete_workout](https://user-images.githubusercontent.com/67501734/162546633-2358a625-8858-4a95-9dd7-30911c893980.gif)
+
 
 ### Create a new schedule
 
-https://user-images.githubusercontent.com/67501734/160208630-a4c125ce-b543-4b77-8891-c6db0e90babd.mov
+![create_schedule](https://user-images.githubusercontent.com/67501734/162546616-b5df9146-49b1-44c4-a40f-53032bee4c31.gif)
+
 
 ### Update a schedule
 
-https://user-images.githubusercontent.com/67501734/160208642-f4a3084c-f747-48a5-936e-5798ece2ffb8.mov
+![update_schedule](https://user-images.githubusercontent.com/67501734/162546648-1d8a9e46-6b12-4b16-8d30-48b3227e3e06.gif)
 
 ### ChangePassword
 
-https://user-images.githubusercontent.com/67501734/160208652-3fcafe13-d7d5-40c4-b281-aba2aa12f72d.mov
+![changePassword](https://user-images.githubusercontent.com/67501734/162546610-7bac501e-6bba-4600-9436-a1c6004d29bf.gif)
+
 
 ### Logout
 
-https://user-images.githubusercontent.com/67501734/160208663-6afcb8b5-370f-409b-b911-2084bc731686.mov
+![logout](https://user-images.githubusercontent.com/67501734/162546638-657c3956-7bad-4e85-9777-6e9da12ac904.gif)
 
 ### Delete a user
 
-https://user-images.githubusercontent.com/67501734/160208679-a1cea2dd-81f4-4edb-99d6-b6f0ccffc096.mov
+![delete_user](https://user-images.githubusercontent.com/67501734/162546625-d1d05724-60d0-4bb4-8bd3-bcf89628117a.gif)
+
 
 ## License
 
