@@ -144,39 +144,22 @@ const Home = () => {
 										(60 * 1000)
 								);
 
-								const d = Math.floor(timeDiff / 60 / 24);
-								const h = Math.floor((timeDiff / 60) % 24);
-								const m = Math.floor(timeDiff % 60);
-								const dDis = d > 0 ? d + (d === 1 ? " day " : " days ") : "";
-								const hDis = h > 0 ? h + " h " : "";
-								const mDis = m > 0 ? m + " min " : "";
-
 								if (timeDiff <= 48 * 60) {
 									return (
 										<Col5 data-label="Status" style={{ color: "blue" }}>
 											Rest
-											{/* <br />
-											{hDis}
-											{mDis} ago */}
 										</Col5>
 									);
 								} else if (timeDiff <= 72 * 60) {
 									return (
 										<Col5 data-label="Status" style={{ color: "lightgreen" }}>
 											Ready
-											{/* <br />
-											{hDis}
-											{mDis} ago */}
 										</Col5>
 									);
 								} else {
 									return (
 										<Col5 data-label="Status" style={{ color: "red" }}>
 											Lazy
-											{/* <br />
-											{dDis}
-											{hDis}
-											{mDis} ago */}
 										</Col5>
 									);
 								}
