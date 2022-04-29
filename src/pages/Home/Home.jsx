@@ -155,28 +155,28 @@ const Home = () => {
 									return (
 										<Col5 data-label="Status" style={{ color: "blue" }}>
 											Rest
-											<br />
+											{/* <br />
 											{hDis}
-											{mDis} ago
+											{mDis} ago */}
 										</Col5>
 									);
 								} else if (timeDiff <= 72 * 60) {
 									return (
 										<Col5 data-label="Status" style={{ color: "lightgreen" }}>
 											Ready
-											<br />
+											{/* <br />
 											{hDis}
-											{mDis} ago
+											{mDis} ago */}
 										</Col5>
 									);
 								} else {
 									return (
 										<Col5 data-label="Status" style={{ color: "red" }}>
 											Lazy
-											<br />
+											{/* <br />
 											{dDis}
 											{hDis}
-											{mDis} ago
+											{mDis} ago */}
 										</Col5>
 									);
 								}
